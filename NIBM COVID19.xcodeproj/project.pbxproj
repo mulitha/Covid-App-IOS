@@ -1,0 +1,916 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1CE171A69620D980E048554A /* Pods_NIBM_COVID19_NIBM_COVID19UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBAF4060C7453C4FC610867 /* Pods_NIBM_COVID19_NIBM_COVID19UITests.framework */; };
+		52B64601A1E0C4BD09385AC9 /* Pods_NIBM_COVID19Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05923E1A11A7EF6AB15356F9 /* Pods_NIBM_COVID19Tests.framework */; };
+		991A2D9C25132ACE00F1B6FE /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A2D9B25132ACE00F1B6FE /* NotificationModel.swift */; };
+		991A2D9F2513310A00F1B6FE /* DateConvertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A2D9E2513310A00F1B6FE /* DateConvertion.swift */; };
+		991A2DA025138CE600F1B6FE /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99218DBB25126A9E00C3ECC9 /* Service.swift */; };
+		991A2DA225138CEF00F1B6FE /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99218DBB25126A9E00C3ECC9 /* Service.swift */; };
+		99218DBC25126A9E00C3ECC9 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99218DBB25126A9E00C3ECC9 /* Service.swift */; };
+		9921CA822512060C00D49C7F /* SurveyOnesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9921CA812512060C00D49C7F /* SurveyOnesViewController.swift */; };
+		9921CA842512093000D49C7F /* SurveyTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9921CA832512093000D49C7F /* SurveyTwoViewController.swift */; };
+		9921CA8625120BA000D49C7F /* SurveyThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9921CA8525120BA000D49C7F /* SurveyThreeViewController.swift */; };
+		9921CA8825120E9800D49C7F /* SurveyFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9921CA8725120E9800D49C7F /* SurveyFourViewController.swift */; };
+		9921CA8A25121FA800D49C7F /* SurveyCompletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9921CA8925121FA800D49C7F /* SurveyCompletionViewController.swift */; };
+		9921D37325141022003F4699 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9921D37225141022003F4699 /* SettingsViewController.swift */; };
+		9921D37525142300003F4699 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9921D37425142300003F4699 /* SettingsTableViewCell.swift */; };
+		992649182512ABE000740E17 /* TemperatureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992649172512ABE000740E17 /* TemperatureModel.swift */; };
+		9954F8CC250E869E006B73FD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9954F8CB250E869E006B73FD /* ProfileViewController.swift */; };
+		9954F8D6250EDEBE006B73FD /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9954F8D5250EDEBE006B73FD /* NotificationTableViewController.swift */; };
+		9954F8D8250EE20B006B73FD /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9954F8D7250EE20B006B73FD /* NotificationTableViewCell.swift */; };
+		9958BCF1250BF9DD00A6F1E4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9958BCF0250BF9DD00A6F1E4 /* HomeViewController.swift */; };
+		998A999425108384004168CC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998A999325108384004168CC /* SignUpViewController.swift */; };
+		998A999625108F2E004168CC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998A999525108F2E004168CC /* LoginViewController.swift */; };
+		998A99982510FED8004168CC /* InfoUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998A99972510FED8004168CC /* InfoUpdateViewController.swift */; };
+		99B01FC3250E3166001F316C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99B01FC2250E3166001F316C /* GoogleService-Info.plist */; };
+		99EB3997250F79DD00BA268A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB3996250F79DD00BA268A /* MapViewController.swift */; };
+		99EB399D250FD5CF00BA268A /* MapSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB399C250FD5CF00BA268A /* MapSearchViewController.swift */; };
+		99F36DF6250BDA6800875CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F36DF5250BDA6800875CCC /* AppDelegate.swift */; };
+		99F36DF8250BDA6800875CCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F36DF7250BDA6800875CCC /* SceneDelegate.swift */; };
+		99F36DFA250BDA6800875CCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F36DF9250BDA6800875CCC /* ViewController.swift */; };
+		99F36DFD250BDA6800875CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99F36DFB250BDA6800875CCC /* Main.storyboard */; };
+		99F36E00250BDA6800875CCC /* NIBM_COVID19.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99F36DFE250BDA6800875CCC /* NIBM_COVID19.xcdatamodeld */; };
+		99F36E02250BDA7200875CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99F36E01250BDA7200875CCC /* Assets.xcassets */; };
+		99F36E05250BDA7200875CCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99F36E03250BDA7200875CCC /* LaunchScreen.storyboard */; };
+		99F36E10250BDA7200875CCC /* NIBM_COVID19Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F36E0F250BDA7200875CCC /* NIBM_COVID19Tests.swift */; };
+		99F36E1B250BDA7200875CCC /* NIBM_COVID19UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F36E1A250BDA7200875CCC /* NIBM_COVID19UITests.swift */; };
+		99F36E2D250BE33E00875CCC /* ButtonUi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F36E2C250BE33E00875CCC /* ButtonUi.swift */; };
+		C02B5009EBA41211FE38E6EA /* Pods_NIBM_COVID19.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC940E072C6259128C6BC2A /* Pods_NIBM_COVID19.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		99F36E0C250BDA7200875CCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99F36DEA250BDA6700875CCC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99F36DF1250BDA6800875CCC;
+			remoteInfo = "NIBM COVID19";
+		};
+		99F36E17250BDA7200875CCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99F36DEA250BDA6700875CCC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99F36DF1250BDA6800875CCC;
+			remoteInfo = "NIBM COVID19";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05923E1A11A7EF6AB15356F9 /* Pods_NIBM_COVID19Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NIBM_COVID19Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		272EF4F39DBDE9D600945D12 /* Pods-NIBM COVID19Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM COVID19Tests.release.xcconfig"; path = "Target Support Files/Pods-NIBM COVID19Tests/Pods-NIBM COVID19Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2A1A39FA97CD9C44B1CA23C2 /* Pods-NIBM COVID19Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM COVID19Tests.debug.xcconfig"; path = "Target Support Files/Pods-NIBM COVID19Tests/Pods-NIBM COVID19Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		591D0ACC9DD47AC157FA3780 /* Pods-NIBM COVID19-NIBM COVID19UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM COVID19-NIBM COVID19UITests.release.xcconfig"; path = "Target Support Files/Pods-NIBM COVID19-NIBM COVID19UITests/Pods-NIBM COVID19-NIBM COVID19UITests.release.xcconfig"; sourceTree = "<group>"; };
+		7934E836B30B852072A6BEA8 /* Pods-NIBM COVID19.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM COVID19.debug.xcconfig"; path = "Target Support Files/Pods-NIBM COVID19/Pods-NIBM COVID19.debug.xcconfig"; sourceTree = "<group>"; };
+		7CF3FDD138F0B65F94C285A8 /* Pods-NIBM COVID19-NIBM COVID19UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM COVID19-NIBM COVID19UITests.debug.xcconfig"; path = "Target Support Files/Pods-NIBM COVID19-NIBM COVID19UITests/Pods-NIBM COVID19-NIBM COVID19UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		935D771B2D0F27D7A7DDAC0C /* Pods-NIBM COVID19.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM COVID19.release.xcconfig"; path = "Target Support Files/Pods-NIBM COVID19/Pods-NIBM COVID19.release.xcconfig"; sourceTree = "<group>"; };
+		991A2D9B25132ACE00F1B6FE /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		991A2D9E2513310A00F1B6FE /* DateConvertion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConvertion.swift; sourceTree = "<group>"; };
+		99218DBB25126A9E00C3ECC9 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		9921CA812512060C00D49C7F /* SurveyOnesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyOnesViewController.swift; sourceTree = "<group>"; };
+		9921CA832512093000D49C7F /* SurveyTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTwoViewController.swift; sourceTree = "<group>"; };
+		9921CA8525120BA000D49C7F /* SurveyThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyThreeViewController.swift; sourceTree = "<group>"; };
+		9921CA8725120E9800D49C7F /* SurveyFourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyFourViewController.swift; sourceTree = "<group>"; };
+		9921CA8925121FA800D49C7F /* SurveyCompletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyCompletionViewController.swift; sourceTree = "<group>"; };
+		9921D37225141022003F4699 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9921D37425142300003F4699 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		992649172512ABE000740E17 /* TemperatureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureModel.swift; sourceTree = "<group>"; };
+		9954F8CB250E869E006B73FD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9954F8D5250EDEBE006B73FD /* NotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
+		9954F8D7250EE20B006B73FD /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		9958BCF0250BF9DD00A6F1E4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		998A999325108384004168CC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		998A999525108F2E004168CC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		998A99972510FED8004168CC /* InfoUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUpdateViewController.swift; sourceTree = "<group>"; };
+		99B01FC2250E3166001F316C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		99EB3996250F79DD00BA268A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		99EB399C250FD5CF00BA268A /* MapSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchViewController.swift; sourceTree = "<group>"; };
+		99F36DF2250BDA6800875CCC /* NIBM COVID19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM COVID19.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99F36DF5250BDA6800875CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		99F36DF7250BDA6800875CCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		99F36DF9250BDA6800875CCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		99F36DFC250BDA6800875CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		99F36DFF250BDA6800875CCC /* NIBM_COVID19.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NIBM_COVID19.xcdatamodel; sourceTree = "<group>"; };
+		99F36E01250BDA7200875CCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99F36E04250BDA7200875CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		99F36E06250BDA7200875CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99F36E0B250BDA7200875CCC /* NIBM COVID19Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NIBM COVID19Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99F36E0F250BDA7200875CCC /* NIBM_COVID19Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBM_COVID19Tests.swift; sourceTree = "<group>"; };
+		99F36E11250BDA7200875CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99F36E16250BDA7200875CCC /* NIBM COVID19UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NIBM COVID19UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99F36E1A250BDA7200875CCC /* NIBM_COVID19UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBM_COVID19UITests.swift; sourceTree = "<group>"; };
+		99F36E1C250BDA7200875CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99F36E2C250BE33E00875CCC /* ButtonUi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonUi.swift; sourceTree = "<group>"; };
+		EEBAF4060C7453C4FC610867 /* Pods_NIBM_COVID19_NIBM_COVID19UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NIBM_COVID19_NIBM_COVID19UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAC940E072C6259128C6BC2A /* Pods_NIBM_COVID19.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NIBM_COVID19.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		99F36DEF250BDA6800875CCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C02B5009EBA41211FE38E6EA /* Pods_NIBM_COVID19.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99F36E08250BDA7200875CCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B64601A1E0C4BD09385AC9 /* Pods_NIBM_COVID19Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99F36E13250BDA7200875CCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CE171A69620D980E048554A /* Pods_NIBM_COVID19_NIBM_COVID19UITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E1EA7A694906799A4583CDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7934E836B30B852072A6BEA8 /* Pods-NIBM COVID19.debug.xcconfig */,
+				935D771B2D0F27D7A7DDAC0C /* Pods-NIBM COVID19.release.xcconfig */,
+				7CF3FDD138F0B65F94C285A8 /* Pods-NIBM COVID19-NIBM COVID19UITests.debug.xcconfig */,
+				591D0ACC9DD47AC157FA3780 /* Pods-NIBM COVID19-NIBM COVID19UITests.release.xcconfig */,
+				2A1A39FA97CD9C44B1CA23C2 /* Pods-NIBM COVID19Tests.debug.xcconfig */,
+				272EF4F39DBDE9D600945D12 /* Pods-NIBM COVID19Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3A9574DA910D376AAA126997 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAC940E072C6259128C6BC2A /* Pods_NIBM_COVID19.framework */,
+				EEBAF4060C7453C4FC610867 /* Pods_NIBM_COVID19_NIBM_COVID19UITests.framework */,
+				05923E1A11A7EF6AB15356F9 /* Pods_NIBM_COVID19Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		991A2D9D251330F100F1B6FE /* HelpClass */ = {
+			isa = PBXGroup;
+			children = (
+				991A2D9E2513310A00F1B6FE /* DateConvertion.swift */,
+			);
+			path = HelpClass;
+			sourceTree = "<group>";
+		};
+		99218DBA25126A7100C3ECC9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				99218DBB25126A9E00C3ECC9 /* Service.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		992649162512ABA400740E17 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				992649172512ABE000740E17 /* TemperatureModel.swift */,
+				991A2D9B25132ACE00F1B6FE /* NotificationModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		999E220B251154340005F769 /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				9921CA812512060C00D49C7F /* SurveyOnesViewController.swift */,
+				9921CA832512093000D49C7F /* SurveyTwoViewController.swift */,
+				9921CA8525120BA000D49C7F /* SurveyThreeViewController.swift */,
+				9921CA8725120E9800D49C7F /* SurveyFourViewController.swift */,
+				9921CA8925121FA800D49C7F /* SurveyCompletionViewController.swift */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		99F36DE9250BDA6700875CCC = {
+			isa = PBXGroup;
+			children = (
+				99F36DF4250BDA6800875CCC /* NIBM COVID19 */,
+				99F36E0E250BDA7200875CCC /* NIBM COVID19Tests */,
+				99F36E19250BDA7200875CCC /* NIBM COVID19UITests */,
+				99F36DF3250BDA6800875CCC /* Products */,
+				0E1EA7A694906799A4583CDF /* Pods */,
+				3A9574DA910D376AAA126997 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		99F36DF3250BDA6800875CCC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99F36DF2250BDA6800875CCC /* NIBM COVID19.app */,
+				99F36E0B250BDA7200875CCC /* NIBM COVID19Tests.xctest */,
+				99F36E16250BDA7200875CCC /* NIBM COVID19UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99F36DF4250BDA6800875CCC /* NIBM COVID19 */ = {
+			isa = PBXGroup;
+			children = (
+				991A2D9D251330F100F1B6FE /* HelpClass */,
+				992649162512ABA400740E17 /* Models */,
+				99218DBA25126A7100C3ECC9 /* Services */,
+				99F36E2B250BE2FF00875CCC /* Assets */,
+				99F36E2A250BE2E000875CCC /* Gradient */,
+				99F36E29250BE2CD00875CCC /* Controllers */,
+				99F36E28250BE2BC00875CCC /* UiClass */,
+				99F36DF5250BDA6800875CCC /* AppDelegate.swift */,
+				99F36DF7250BDA6800875CCC /* SceneDelegate.swift */,
+				99F36DFB250BDA6800875CCC /* Main.storyboard */,
+				99F36E01250BDA7200875CCC /* Assets.xcassets */,
+				99F36E03250BDA7200875CCC /* LaunchScreen.storyboard */,
+				99F36E06250BDA7200875CCC /* Info.plist */,
+				99B01FC2250E3166001F316C /* GoogleService-Info.plist */,
+				99F36DFE250BDA6800875CCC /* NIBM_COVID19.xcdatamodeld */,
+			);
+			path = "NIBM COVID19";
+			sourceTree = "<group>";
+		};
+		99F36E0E250BDA7200875CCC /* NIBM COVID19Tests */ = {
+			isa = PBXGroup;
+			children = (
+				99F36E0F250BDA7200875CCC /* NIBM_COVID19Tests.swift */,
+				99F36E11250BDA7200875CCC /* Info.plist */,
+			);
+			path = "NIBM COVID19Tests";
+			sourceTree = "<group>";
+		};
+		99F36E19250BDA7200875CCC /* NIBM COVID19UITests */ = {
+			isa = PBXGroup;
+			children = (
+				99F36E1A250BDA7200875CCC /* NIBM_COVID19UITests.swift */,
+				99F36E1C250BDA7200875CCC /* Info.plist */,
+			);
+			path = "NIBM COVID19UITests";
+			sourceTree = "<group>";
+		};
+		99F36E28250BE2BC00875CCC /* UiClass */ = {
+			isa = PBXGroup;
+			children = (
+				99F36E2C250BE33E00875CCC /* ButtonUi.swift */,
+				9954F8D7250EE20B006B73FD /* NotificationTableViewCell.swift */,
+				9921D37425142300003F4699 /* SettingsTableViewCell.swift */,
+			);
+			path = UiClass;
+			sourceTree = "<group>";
+		};
+		99F36E29250BE2CD00875CCC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				999E220B251154340005F769 /* Survey */,
+				9958BCF0250BF9DD00A6F1E4 /* HomeViewController.swift */,
+				99F36DF9250BDA6800875CCC /* ViewController.swift */,
+				9954F8CB250E869E006B73FD /* ProfileViewController.swift */,
+				9954F8D5250EDEBE006B73FD /* NotificationTableViewController.swift */,
+				99EB3996250F79DD00BA268A /* MapViewController.swift */,
+				99EB399C250FD5CF00BA268A /* MapSearchViewController.swift */,
+				998A999325108384004168CC /* SignUpViewController.swift */,
+				998A999525108F2E004168CC /* LoginViewController.swift */,
+				998A99972510FED8004168CC /* InfoUpdateViewController.swift */,
+				9921D37225141022003F4699 /* SettingsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		99F36E2A250BE2E000875CCC /* Gradient */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Gradient;
+			sourceTree = "<group>";
+		};
+		99F36E2B250BE2FF00875CCC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		99F36DF1250BDA6800875CCC /* NIBM COVID19 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99F36E1F250BDA7200875CCC /* Build configuration list for PBXNativeTarget "NIBM COVID19" */;
+			buildPhases = (
+				512135BB83B651C6861340D4 /* [CP] Check Pods Manifest.lock */,
+				99F36DEE250BDA6800875CCC /* Sources */,
+				99F36DEF250BDA6800875CCC /* Frameworks */,
+				99F36DF0250BDA6800875CCC /* Resources */,
+				F00005A88477D50311973CDD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NIBM COVID19";
+			productName = "NIBM COVID19";
+			productReference = 99F36DF2250BDA6800875CCC /* NIBM COVID19.app */;
+			productType = "com.apple.product-type.application";
+		};
+		99F36E0A250BDA7200875CCC /* NIBM COVID19Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99F36E22250BDA7200875CCC /* Build configuration list for PBXNativeTarget "NIBM COVID19Tests" */;
+			buildPhases = (
+				1A3CC133E2988F6AE0960B54 /* [CP] Check Pods Manifest.lock */,
+				99F36E07250BDA7200875CCC /* Sources */,
+				99F36E08250BDA7200875CCC /* Frameworks */,
+				99F36E09250BDA7200875CCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99F36E0D250BDA7200875CCC /* PBXTargetDependency */,
+			);
+			name = "NIBM COVID19Tests";
+			productName = "NIBM COVID19Tests";
+			productReference = 99F36E0B250BDA7200875CCC /* NIBM COVID19Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		99F36E15250BDA7200875CCC /* NIBM COVID19UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99F36E25250BDA7200875CCC /* Build configuration list for PBXNativeTarget "NIBM COVID19UITests" */;
+			buildPhases = (
+				EA4E56CAD452DA3A858E0BA5 /* [CP] Check Pods Manifest.lock */,
+				99F36E12250BDA7200875CCC /* Sources */,
+				99F36E13250BDA7200875CCC /* Frameworks */,
+				99F36E14250BDA7200875CCC /* Resources */,
+				0C10BD682F8EF8309151B93D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99F36E18250BDA7200875CCC /* PBXTargetDependency */,
+			);
+			name = "NIBM COVID19UITests";
+			productName = "NIBM COVID19UITests";
+			productReference = 99F36E16250BDA7200875CCC /* NIBM COVID19UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		99F36DEA250BDA6700875CCC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = mulitha;
+				TargetAttributes = {
+					99F36DF1250BDA6800875CCC = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					99F36E0A250BDA7200875CCC = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 99F36DF1250BDA6800875CCC;
+					};
+					99F36E15250BDA7200875CCC = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 99F36DF1250BDA6800875CCC;
+					};
+				};
+			};
+			buildConfigurationList = 99F36DED250BDA6700875CCC /* Build configuration list for PBXProject "NIBM COVID19" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 99F36DE9250BDA6700875CCC;
+			productRefGroup = 99F36DF3250BDA6800875CCC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				99F36DF1250BDA6800875CCC /* NIBM COVID19 */,
+				99F36E0A250BDA7200875CCC /* NIBM COVID19Tests */,
+				99F36E15250BDA7200875CCC /* NIBM COVID19UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		99F36DF0250BDA6800875CCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99F36E05250BDA7200875CCC /* LaunchScreen.storyboard in Resources */,
+				99B01FC3250E3166001F316C /* GoogleService-Info.plist in Resources */,
+				99F36E02250BDA7200875CCC /* Assets.xcassets in Resources */,
+				99F36DFD250BDA6800875CCC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99F36E09250BDA7200875CCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99F36E14250BDA7200875CCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C10BD682F8EF8309151B93D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NIBM COVID19-NIBM COVID19UITests/Pods-NIBM COVID19-NIBM COVID19UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NIBM COVID19-NIBM COVID19UITests/Pods-NIBM COVID19-NIBM COVID19UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NIBM COVID19-NIBM COVID19UITests/Pods-NIBM COVID19-NIBM COVID19UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1A3CC133E2988F6AE0960B54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NIBM COVID19Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		512135BB83B651C6861340D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NIBM COVID19-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA4E56CAD452DA3A858E0BA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NIBM COVID19-NIBM COVID19UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F00005A88477D50311973CDD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NIBM COVID19/Pods-NIBM COVID19-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NIBM COVID19/Pods-NIBM COVID19-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NIBM COVID19/Pods-NIBM COVID19-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99F36DEE250BDA6800875CCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9921CA8825120E9800D49C7F /* SurveyFourViewController.swift in Sources */,
+				99EB3997250F79DD00BA268A /* MapViewController.swift in Sources */,
+				9921CA8A25121FA800D49C7F /* SurveyCompletionViewController.swift in Sources */,
+				9954F8D6250EDEBE006B73FD /* NotificationTableViewController.swift in Sources */,
+				99F36DFA250BDA6800875CCC /* ViewController.swift in Sources */,
+				998A999625108F2E004168CC /* LoginViewController.swift in Sources */,
+				998A99982510FED8004168CC /* InfoUpdateViewController.swift in Sources */,
+				99F36E00250BDA6800875CCC /* NIBM_COVID19.xcdatamodeld in Sources */,
+				99218DBC25126A9E00C3ECC9 /* Service.swift in Sources */,
+				99EB399D250FD5CF00BA268A /* MapSearchViewController.swift in Sources */,
+				99F36DF6250BDA6800875CCC /* AppDelegate.swift in Sources */,
+				9921CA822512060C00D49C7F /* SurveyOnesViewController.swift in Sources */,
+				998A999425108384004168CC /* SignUpViewController.swift in Sources */,
+				9921D37525142300003F4699 /* SettingsTableViewCell.swift in Sources */,
+				99F36DF8250BDA6800875CCC /* SceneDelegate.swift in Sources */,
+				991A2D9C25132ACE00F1B6FE /* NotificationModel.swift in Sources */,
+				9921CA842512093000D49C7F /* SurveyTwoViewController.swift in Sources */,
+				992649182512ABE000740E17 /* TemperatureModel.swift in Sources */,
+				9954F8D8250EE20B006B73FD /* NotificationTableViewCell.swift in Sources */,
+				9958BCF1250BF9DD00A6F1E4 /* HomeViewController.swift in Sources */,
+				991A2D9F2513310A00F1B6FE /* DateConvertion.swift in Sources */,
+				9954F8CC250E869E006B73FD /* ProfileViewController.swift in Sources */,
+				99F36E2D250BE33E00875CCC /* ButtonUi.swift in Sources */,
+				9921CA8625120BA000D49C7F /* SurveyThreeViewController.swift in Sources */,
+				9921D37325141022003F4699 /* SettingsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99F36E07250BDA7200875CCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99F36E10250BDA7200875CCC /* NIBM_COVID19Tests.swift in Sources */,
+				991A2DA025138CE600F1B6FE /* Service.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99F36E12250BDA7200875CCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99F36E1B250BDA7200875CCC /* NIBM_COVID19UITests.swift in Sources */,
+				991A2DA225138CEF00F1B6FE /* Service.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		99F36E0D250BDA7200875CCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99F36DF1250BDA6800875CCC /* NIBM COVID19 */;
+			targetProxy = 99F36E0C250BDA7200875CCC /* PBXContainerItemProxy */;
+		};
+		99F36E18250BDA7200875CCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99F36DF1250BDA6800875CCC /* NIBM COVID19 */;
+			targetProxy = 99F36E17250BDA7200875CCC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		99F36DFB250BDA6800875CCC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99F36DFC250BDA6800875CCC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		99F36E03250BDA7200875CCC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99F36E04250BDA7200875CCC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		99F36E1D250BDA7200875CCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		99F36E1E250BDA7200875CCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		99F36E20250BDA7200875CCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7934E836B30B852072A6BEA8 /* Pods-NIBM COVID19.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "NIBM COVID19/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mulitha.NIBM-COVID19";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		99F36E21250BDA7200875CCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 935D771B2D0F27D7A7DDAC0C /* Pods-NIBM COVID19.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "NIBM COVID19/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mulitha.NIBM-COVID19";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		99F36E23250BDA7200875CCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A1A39FA97CD9C44B1CA23C2 /* Pods-NIBM COVID19Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "NIBM COVID19Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mulitha.NIBM-COVID19Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NIBM COVID19.app/NIBM COVID19";
+			};
+			name = Debug;
+		};
+		99F36E24250BDA7200875CCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 272EF4F39DBDE9D600945D12 /* Pods-NIBM COVID19Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "NIBM COVID19Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mulitha.NIBM-COVID19Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NIBM COVID19.app/NIBM COVID19";
+			};
+			name = Release;
+		};
+		99F36E26250BDA7200875CCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CF3FDD138F0B65F94C285A8 /* Pods-NIBM COVID19-NIBM COVID19UITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "NIBM COVID19UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mulitha.NIBM-COVID19UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "NIBM COVID19";
+			};
+			name = Debug;
+		};
+		99F36E27250BDA7200875CCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 591D0ACC9DD47AC157FA3780 /* Pods-NIBM COVID19-NIBM COVID19UITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "NIBM COVID19UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mulitha.NIBM-COVID19UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "NIBM COVID19";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		99F36DED250BDA6700875CCC /* Build configuration list for PBXProject "NIBM COVID19" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99F36E1D250BDA7200875CCC /* Debug */,
+				99F36E1E250BDA7200875CCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99F36E1F250BDA7200875CCC /* Build configuration list for PBXNativeTarget "NIBM COVID19" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99F36E20250BDA7200875CCC /* Debug */,
+				99F36E21250BDA7200875CCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99F36E22250BDA7200875CCC /* Build configuration list for PBXNativeTarget "NIBM COVID19Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99F36E23250BDA7200875CCC /* Debug */,
+				99F36E24250BDA7200875CCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99F36E25250BDA7200875CCC /* Build configuration list for PBXNativeTarget "NIBM COVID19UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99F36E26250BDA7200875CCC /* Debug */,
+				99F36E27250BDA7200875CCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		99F36DFE250BDA6800875CCC /* NIBM_COVID19.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				99F36DFF250BDA6800875CCC /* NIBM_COVID19.xcdatamodel */,
+			);
+			currentVersion = 99F36DFF250BDA6800875CCC /* NIBM_COVID19.xcdatamodel */;
+			path = NIBM_COVID19.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 99F36DEA250BDA6700875CCC /* Project object */;
+}
