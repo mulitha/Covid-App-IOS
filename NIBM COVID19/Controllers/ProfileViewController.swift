@@ -25,6 +25,28 @@ class ProfileViewController: UIViewController {
     }
     
     
+    @IBAction func onLogOut(_ sender: Any) {
+        
+        if (Service.shared.signOut() == 0){
+            
+            DispatchQueue.main.async {
+                                        
+                let mianStorybord = UIStoryboard(name:"Main", bundle: Bundle.main)
+                guard let signInVC = mianStorybord.instantiateViewController(withIdentifier: "LoginViewController") as?
+                    LoginViewController else{
+                        return
+                }
+                
+                let navigation = UINavigationController(rootViewController: signInVC)
+                navigation.modalPresentationStyle = .fullScreen
+                self.present(navigation,animated: true,completion: nil)
+
+            }
+            
+        }
+        
+        
+    }
     
     func createAndSetupPickerView(){
         
@@ -51,6 +73,12 @@ class ProfileViewController: UIViewController {
     @objc func dismissAction(){
         self.view.endEditing((true))
     }
+    
+    
+
+    
+    
+    
 }
 
 

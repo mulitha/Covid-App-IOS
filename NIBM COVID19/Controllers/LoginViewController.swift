@@ -8,19 +8,26 @@
 
 import UIKit
 import Firebase
+import MapKit
 
 class LoginViewController: UIViewController {
     
     
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
+    private let locationManager = LocationHandler.shared.locationManager
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = false
-        let leftButton =  UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(self.dismissAction))
-        navigationItem.leftBarButtonItem = leftButton
+        self.navigationController?.navigationBar.isHidden = true
+        enableLocationServices()
+        
+        
+//        let leftButton =  UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(self.dismissAction))
+//        navigationItem.leftBarButtonItem = leftButton
+        
     }
     
     @IBAction func onSignIn(_ sender: Any) {
@@ -28,18 +35,15 @@ class LoginViewController: UIViewController {
         guard let email = emailText.text else{return}
         guard let pwd = passwordText.text else{return}
 
-        
         Auth.auth().signIn(withEmail: email, password: pwd) { (result, error) in
             if let error = error {
                 print("Faild to register user with error \(error)")
                 return
             }
-            
+            LocationHandler.shared.syncUserLocation()
             self.dismiss(animated: true, completion: nil)
             
-            
         }
-
     }
     
     
@@ -58,9 +62,6 @@ class LoginViewController: UIViewController {
 
        self.navigationController!.pushViewController(signUpVC, animated: true)
         
-
-
-        
     }
     
     
@@ -70,7 +71,26 @@ class LoginViewController: UIViewController {
          self.dismiss(animated: true, completion: nil)
      }
     
-    
-    
+}
 
+
+
+extension LoginViewController {
+
+func enableLocationServices() {
+    
+    switch CLLocationManager.authorizationStatus() {
+    case .notDetermined:
+        locationManager?.requestWhenInUseAuthorization()
+    case .restricted, .denied:
+        break
+    case .authorizedWhenInUse:
+        locationManager?.requestAlwaysAuthorization()
+    case .authorizedAlways:
+        locationManager?.startUpdatingLocation()
+        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+    default:
+        break
+    }
+}
 }

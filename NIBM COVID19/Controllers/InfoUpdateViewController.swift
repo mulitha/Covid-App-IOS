@@ -14,20 +14,22 @@ import Firebase
 class InfoUpdateViewController: UIViewController {
     
     
-    @IBOutlet weak var tempTextField: UITextField!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var tempLastUpdateTimeLabel: UILabel!
+    @IBOutlet weak var tempSlider: UISlider!
     
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        manageVaigationControll(isVisible:true)
+        manageVaigationControll(isVisible:false)
         checkIsUserLoginIn()
         
     }
     
     
+    @IBAction func onSliderChange(_ sender: Any) {
+        tempLabel.text = String(Int(tempSlider.value))
+    }
     
     
     @IBAction func onClickNewSurvey(_ sender: Any) {
@@ -49,17 +51,21 @@ class InfoUpdateViewController: UIViewController {
         
                 
         let userTemperatureInfoArray = [
-            "temperature": tempTextField.text ?? "",
-            "syncDateTime": DateConvertion.shared.stringFromDate(Date())
+            "temperature": tempLabel.text ?? "",
+            "syncDateTime": DateConvertion.shared.stringFromDate(Date()),
+            "uid":Service.shared.getUserUid()
         ]as [String : Any]
         
         
        let usertempartureStatus = Service.shared.updateUserTemperture(userTemperatureInfoArray)
        print(usertempartureStatus)
         
-        tempTextField.text = nil
 
     }
+    
+    
+    
+    
     
     //MARK: Properties
 
@@ -68,8 +74,9 @@ class InfoUpdateViewController: UIViewController {
             let Days = DateConvertion.shared.dateFromString(userTemperatureDetails!.syncDate)
 
             tempLabel.text = userTemperatureDetails?.temperature
+            tempSlider.value = Float(tempLabel.text ?? "0") ?? 0
             tempLastUpdateTimeLabel.text = ("Last updated on " + Days )
-            
+        
         }
     }
  

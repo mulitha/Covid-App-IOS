@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import MapKit
+
 
 class SignUpViewController: UIViewController {
     
@@ -18,24 +20,31 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var accountTypeSegmentControll: UISegmentedControl!
     
+    private let locationManager = LocationHandler.shared.locationManager
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.navigationController?.navigationBar.isHidden = false
         //let leftButton =  UIBarButtonItem(title: "Back", style: .plain, target: self, action: nil)
         //navigationItem.leftBarButtonItem = leftButton
+
     }
+    
     
     
     
     @IBAction func onSignUp(_ sender: Any) {
         
+        enableLocationServices()
+
         
-                guard let fName = fNameText.text else {return}
-                guard let lName = lNameText.text else {return}
-                guard let email = emailText.text else {return}
-                guard let pwd = passwordText.text else {return}
-                let accountType = accountTypeSegmentControll.selectedSegmentIndex
+        
+        guard let fName = fNameText.text else {return}
+        guard let lName = lNameText.text else {return}
+        guard let email = emailText.text else {return}
+        guard let pwd = passwordText.text else {return}
+        let accountType = accountTypeSegmentControll.selectedSegmentIndex
         
         
         let values = [
@@ -53,14 +62,13 @@ class SignUpViewController: UIViewController {
                 print("Faild to register user with error \(error)")
                 return
             }
-            guard let uid = result?.user.uid else { return }
-            
-            Database.database().reference().child("users").child(uid).updateChildValues(values) { (error, ref) in
-                print("Successfuly Registerd and save data..")
-            }
+                        
+            Service.shared.userCreation(values)
+            LocationHandler.shared.syncUserLocation()
+            self.dismiss(animated: true, completion: nil)
+
             
         }
-        
     }
     
     
@@ -68,6 +76,34 @@ class SignUpViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    
 
 
+    
+    
+    
+    
+
+}
+
+
+
+extension SignUpViewController {
+
+func enableLocationServices() {
+    
+    switch CLLocationManager.authorizationStatus() {
+    case .notDetermined:
+        locationManager?.requestWhenInUseAuthorization()
+    case .restricted, .denied:
+        break
+    case .authorizedWhenInUse:
+        locationManager?.requestAlwaysAuthorization()
+    case .authorizedAlways:
+        locationManager?.startUpdatingLocation()
+        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+    default:
+        break
+    }
+}
 }

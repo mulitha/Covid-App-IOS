@@ -12,6 +12,7 @@ let DB_REF = Database.database().reference()
 let REF_USERS = DB_REF.child("users")
 let RFF_TEMPINFO = DB_REF.child("TemperatureDetails")
 let REFF_NOTIFICATION = DB_REF.child("Notifications")
+let REF_USERLOCATIONS = DB_REF.child("userLocationDetails")
 
 
 var allNotification = [notificationModel]()
@@ -29,12 +30,12 @@ struct Service {
     
     
     
-    func signOut() ->String {
+    func signOut() ->Int {
         do {
             try Auth.auth().signOut()
-            return "user signOut"
+            return 0
         } catch {
-            return "DEBUG: sign out error"
+            return 1
         }
     }
     
@@ -56,6 +57,43 @@ struct Service {
             completion(userTemperatureDetails)
         })
     }
+    
+    
+    //Get all Temperature details
+    func getAllTemperatureDetails(completion: @escaping([temperatureModal]) -> Void) {
+        
+        var temperature : [temperatureModal] = []
+        temperature.removeAll()
+        
+        
+        RFF_TEMPINFO.observe(DataEventType.value, with : { (snapshot) in
+            
+                for dataSet in snapshot.children.allObjects as![DataSnapshot]{
+                    let dictionary = dataSet.value as? [String:AnyObject]
+
+                    let notification = temperatureModal(dictionary:dictionary!)
+                    temperature.append(notification)
+                    
+                }
+            
+            completion(temperature)
+    
+        })
+    }
+    
+    
+    
+    //Get user Temperature details
+    func getSpecificUserTemperatureDetails(_ uid :String, completion: @escaping(temperatureModal) -> Void) {
+        RFF_TEMPINFO.child(uid).observe(DataEventType.value, with : { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: Any] else { return }
+            let userTemperatureDetails = temperatureModal(dictionary: dictionary)
+            completion(userTemperatureDetails)
+        })
+    }
+    
+    
+    
     
     //post notifications
     func postNotification(_ value: [String:Any])->Int{
@@ -118,10 +156,51 @@ struct Service {
 
             completion(allNotification)
 
-
         })
-
     }
+    
+    
+    func userCreation(_ value: [String:Any] )->Void{
+            REF_USERS.child(getUserUid()).updateChildValues(value){(error, ref) in }
+    }
+    
+
+    func syncUserLocation(_ value: [String:Any] ) ->Void{
+        print(getUserUid())
+        REF_USERLOCATIONS.child(getUserUid()).updateChildValues(value){(error, ref) in }
+    }
+    
+
+    func getLocationUpdates(completion: @escaping([MapLocations]) -> Void) {
+        var mapLocation : [MapLocations] = []
+
+        mapLocation.removeAll()
+         
+         REF_USERLOCATIONS.observe(DataEventType.value, with: { (snapshot) in
+
+             for dataSet in snapshot.children.allObjects as![DataSnapshot]{
+                 let singleData = dataSet.value as? [String:AnyObject]
+
+                 let lat = singleData?["lat"]
+                 let log = singleData?["log"]
+                 let uid = singleData?["uid"]
+                 let syncDateTime = singleData?["syncDateTime"]
+                
+                                        
+                mapLocation.append(MapLocations(lat: lat as! Double, log: log as! Double, uid: uid as! String, syncDateTime: syncDateTime as! String))
+                
+             }
+             
+             completion(mapLocation)
+             
+         })
+        
+
+        }
+    
+    
+    
+    
 
 }
 

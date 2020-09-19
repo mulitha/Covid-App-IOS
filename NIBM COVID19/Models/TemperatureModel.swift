@@ -13,9 +13,12 @@ import Firebase
 struct temperatureModal {
     let temperature: String
     let syncDate: String
+    var uid: String
+
     
     init(dictionary: [String: Any]) {
         self.temperature = dictionary["temperature"] as? String ?? ""
         self.syncDate = dictionary["syncDateTime"] as? String ?? ""
+        self.uid = dictionary["uid"] as? String ?? ""
     }
 }
