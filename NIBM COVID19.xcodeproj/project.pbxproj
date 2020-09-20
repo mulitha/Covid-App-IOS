@@ -13,6 +13,9 @@
 		991A2D9F2513310A00F1B6FE /* DateConvertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A2D9E2513310A00F1B6FE /* DateConvertion.swift */; };
 		991A2DA025138CE600F1B6FE /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99218DBB25126A9E00C3ECC9 /* Service.swift */; };
 		991A2DA225138CEF00F1B6FE /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99218DBB25126A9E00C3ECC9 /* Service.swift */; };
+		991F3F0425178D4A006BBF25 /* ViewSurveyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F3F0325178D4A006BBF25 /* ViewSurveyDetailsViewController.swift */; };
+		991F3F0625178EDB006BBF25 /* SurveyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F3F0525178EDB006BBF25 /* SurveyModel.swift */; };
+		991F3F0825179B1E006BBF25 /* SurveyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F3F0725179B1E006BBF25 /* SurveyTableViewCell.swift */; };
 		99218DBC25126A9E00C3ECC9 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99218DBB25126A9E00C3ECC9 /* Service.swift */; };
 		9921CA822512060C00D49C7F /* SurveyOnesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9921CA812512060C00D49C7F /* SurveyOnesViewController.swift */; };
 		9921CA842512093000D49C7F /* SurveyTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9921CA832512093000D49C7F /* SurveyTwoViewController.swift */; };
@@ -21,12 +24,15 @@
 		9921CA8A25121FA800D49C7F /* SurveyCompletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9921CA8925121FA800D49C7F /* SurveyCompletionViewController.swift */; };
 		9921D37325141022003F4699 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9921D37225141022003F4699 /* SettingsViewController.swift */; };
 		9921D37525142300003F4699 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9921D37425142300003F4699 /* SettingsTableViewCell.swift */; };
-		9923B4292514BF74004E98D7 /* MapSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923B4282514BF74004E98D7 /* MapSearchTableViewCell.swift */; };
 		9923B42D251520B6004E98D7 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923B42C251520B6004E98D7 /* LocationHandler.swift */; };
 		9923B42F25153D10004E98D7 /* MapLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923B42E25153D10004E98D7 /* MapLocations.swift */; };
 		9923B431251552B2004E98D7 /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923B430251552B2004E98D7 /* MapMarker.swift */; };
 		992649182512ABE000740E17 /* TemperatureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992649172512ABE000740E17 /* TemperatureModel.swift */; };
 		992C5B6225161043004F731F /* CardUi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C5B6125161043004F731F /* CardUi.swift */; };
+		992C5B6425166358004F731F /* createNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C5B6325166358004F731F /* createNotificationViewController.swift */; };
+		992C5B6625166D06004F731F /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C5B6525166D06004F731F /* RoundedImageView.swift */; };
+		992C5B6825167052004F731F /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C5B6725167052004F731F /* UserModel.swift */; };
+		992C5B6A251681E5004F731F /* PopupMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C5B69251681E5004F731F /* PopupMessage.swift */; };
 		9954F8CC250E869E006B73FD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9954F8CB250E869E006B73FD /* ProfileViewController.swift */; };
 		9954F8D6250EDEBE006B73FD /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9954F8D5250EDEBE006B73FD /* NotificationTableViewController.swift */; };
 		9954F8D8250EE20B006B73FD /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9954F8D7250EE20B006B73FD /* NotificationTableViewCell.swift */; };
@@ -36,7 +42,6 @@
 		998A99982510FED8004168CC /* InfoUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998A99972510FED8004168CC /* InfoUpdateViewController.swift */; };
 		99B01FC3250E3166001F316C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99B01FC2250E3166001F316C /* GoogleService-Info.plist */; };
 		99EB3997250F79DD00BA268A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB3996250F79DD00BA268A /* MapViewController.swift */; };
-		99EB399D250FD5CF00BA268A /* MapSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB399C250FD5CF00BA268A /* MapSearchViewController.swift */; };
 		99F36DF6250BDA6800875CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F36DF5250BDA6800875CCC /* AppDelegate.swift */; };
 		99F36DF8250BDA6800875CCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F36DF7250BDA6800875CCC /* SceneDelegate.swift */; };
 		99F36DFA250BDA6800875CCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F36DF9250BDA6800875CCC /* ViewController.swift */; };
@@ -77,6 +82,9 @@
 		935D771B2D0F27D7A7DDAC0C /* Pods-NIBM COVID19.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM COVID19.release.xcconfig"; path = "Target Support Files/Pods-NIBM COVID19/Pods-NIBM COVID19.release.xcconfig"; sourceTree = "<group>"; };
 		991A2D9B25132ACE00F1B6FE /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		991A2D9E2513310A00F1B6FE /* DateConvertion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConvertion.swift; sourceTree = "<group>"; };
+		991F3F0325178D4A006BBF25 /* ViewSurveyDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSurveyDetailsViewController.swift; sourceTree = "<group>"; };
+		991F3F0525178EDB006BBF25 /* SurveyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyModel.swift; sourceTree = "<group>"; };
+		991F3F0725179B1E006BBF25 /* SurveyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTableViewCell.swift; sourceTree = "<group>"; };
 		99218DBB25126A9E00C3ECC9 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		9921CA812512060C00D49C7F /* SurveyOnesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyOnesViewController.swift; sourceTree = "<group>"; };
 		9921CA832512093000D49C7F /* SurveyTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTwoViewController.swift; sourceTree = "<group>"; };
@@ -85,12 +93,15 @@
 		9921CA8925121FA800D49C7F /* SurveyCompletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyCompletionViewController.swift; sourceTree = "<group>"; };
 		9921D37225141022003F4699 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9921D37425142300003F4699 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
-		9923B4282514BF74004E98D7 /* MapSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchTableViewCell.swift; sourceTree = "<group>"; };
 		9923B42C251520B6004E98D7 /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
 		9923B42E25153D10004E98D7 /* MapLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocations.swift; sourceTree = "<group>"; };
 		9923B430251552B2004E98D7 /* MapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
 		992649172512ABE000740E17 /* TemperatureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureModel.swift; sourceTree = "<group>"; };
 		992C5B6125161043004F731F /* CardUi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUi.swift; sourceTree = "<group>"; };
+		992C5B6325166358004F731F /* createNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = createNotificationViewController.swift; path = Survey/createNotificationViewController.swift; sourceTree = "<group>"; };
+		992C5B6525166D06004F731F /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		992C5B6725167052004F731F /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		992C5B69251681E5004F731F /* PopupMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupMessage.swift; sourceTree = "<group>"; };
 		9954F8CB250E869E006B73FD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9954F8D5250EDEBE006B73FD /* NotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
 		9954F8D7250EE20B006B73FD /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
@@ -100,7 +111,6 @@
 		998A99972510FED8004168CC /* InfoUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUpdateViewController.swift; sourceTree = "<group>"; };
 		99B01FC2250E3166001F316C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		99EB3996250F79DD00BA268A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		99EB399C250FD5CF00BA268A /* MapSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchViewController.swift; sourceTree = "<group>"; };
 		99F36DF2250BDA6800875CCC /* NIBM COVID19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM COVID19.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F36DF5250BDA6800875CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99F36DF7250BDA6800875CCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +188,7 @@
 				991A2D9E2513310A00F1B6FE /* DateConvertion.swift */,
 				9923B42C251520B6004E98D7 /* LocationHandler.swift */,
 				9923B430251552B2004E98D7 /* MapMarker.swift */,
+				992C5B69251681E5004F731F /* PopupMessage.swift */,
 			);
 			path = HelpClass;
 			sourceTree = "<group>";
@@ -196,6 +207,8 @@
 				992649172512ABE000740E17 /* TemperatureModel.swift */,
 				991A2D9B25132ACE00F1B6FE /* NotificationModel.swift */,
 				9923B42E25153D10004E98D7 /* MapLocations.swift */,
+				992C5B6725167052004F731F /* UserModel.swift */,
+				991F3F0525178EDB006BBF25 /* SurveyModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -208,6 +221,7 @@
 				9921CA8525120BA000D49C7F /* SurveyThreeViewController.swift */,
 				9921CA8725120E9800D49C7F /* SurveyFourViewController.swift */,
 				9921CA8925121FA800D49C7F /* SurveyCompletionViewController.swift */,
+				991F3F0325178D4A006BBF25 /* ViewSurveyDetailsViewController.swift */,
 			);
 			path = Survey;
 			sourceTree = "<group>";
@@ -280,8 +294,9 @@
 				99F36E2C250BE33E00875CCC /* ButtonUi.swift */,
 				9954F8D7250EE20B006B73FD /* NotificationTableViewCell.swift */,
 				9921D37425142300003F4699 /* SettingsTableViewCell.swift */,
-				9923B4282514BF74004E98D7 /* MapSearchTableViewCell.swift */,
 				992C5B6125161043004F731F /* CardUi.swift */,
+				992C5B6525166D06004F731F /* RoundedImageView.swift */,
+				991F3F0725179B1E006BBF25 /* SurveyTableViewCell.swift */,
 			);
 			path = UiClass;
 			sourceTree = "<group>";
@@ -295,11 +310,11 @@
 				9954F8CB250E869E006B73FD /* ProfileViewController.swift */,
 				9954F8D5250EDEBE006B73FD /* NotificationTableViewController.swift */,
 				99EB3996250F79DD00BA268A /* MapViewController.swift */,
-				99EB399C250FD5CF00BA268A /* MapSearchViewController.swift */,
 				998A999325108384004168CC /* SignUpViewController.swift */,
 				998A999525108F2E004168CC /* LoginViewController.swift */,
 				998A99972510FED8004168CC /* InfoUpdateViewController.swift */,
 				9921D37225141022003F4699 /* SettingsViewController.swift */,
+				992C5B6325166358004F731F /* createNotificationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -558,6 +573,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				992C5B6625166D06004F731F /* RoundedImageView.swift in Sources */,
 				9921CA8825120E9800D49C7F /* SurveyFourViewController.swift in Sources */,
 				99EB3997250F79DD00BA268A /* MapViewController.swift in Sources */,
 				9921CA8A25121FA800D49C7F /* SurveyCompletionViewController.swift in Sources */,
@@ -565,16 +581,19 @@
 				9923B431251552B2004E98D7 /* MapMarker.swift in Sources */,
 				99F36DFA250BDA6800875CCC /* ViewController.swift in Sources */,
 				998A999625108F2E004168CC /* LoginViewController.swift in Sources */,
+				992C5B6425166358004F731F /* createNotificationViewController.swift in Sources */,
 				998A99982510FED8004168CC /* InfoUpdateViewController.swift in Sources */,
+				992C5B6825167052004F731F /* UserModel.swift in Sources */,
 				99F36E00250BDA6800875CCC /* NIBM_COVID19.xcdatamodeld in Sources */,
 				992C5B6225161043004F731F /* CardUi.swift in Sources */,
+				991F3F0425178D4A006BBF25 /* ViewSurveyDetailsViewController.swift in Sources */,
 				99218DBC25126A9E00C3ECC9 /* Service.swift in Sources */,
-				99EB399D250FD5CF00BA268A /* MapSearchViewController.swift in Sources */,
+				992C5B6A251681E5004F731F /* PopupMessage.swift in Sources */,
+				991F3F0825179B1E006BBF25 /* SurveyTableViewCell.swift in Sources */,
 				99F36DF6250BDA6800875CCC /* AppDelegate.swift in Sources */,
 				9921CA822512060C00D49C7F /* SurveyOnesViewController.swift in Sources */,
 				998A999425108384004168CC /* SignUpViewController.swift in Sources */,
 				9921D37525142300003F4699 /* SettingsTableViewCell.swift in Sources */,
-				9923B4292514BF74004E98D7 /* MapSearchTableViewCell.swift in Sources */,
 				99F36DF8250BDA6800875CCC /* SceneDelegate.swift in Sources */,
 				991A2D9C25132ACE00F1B6FE /* NotificationModel.swift in Sources */,
 				9921CA842512093000D49C7F /* SurveyTwoViewController.swift in Sources */,
@@ -584,6 +603,7 @@
 				9923B42D251520B6004E98D7 /* LocationHandler.swift in Sources */,
 				991A2D9F2513310A00F1B6FE /* DateConvertion.swift in Sources */,
 				9923B42F25153D10004E98D7 /* MapLocations.swift in Sources */,
+				991F3F0625178EDB006BBF25 /* SurveyModel.swift in Sources */,
 				9954F8CC250E869E006B73FD /* ProfileViewController.swift in Sources */,
 				99F36E2D250BE33E00875CCC /* ButtonUi.swift in Sources */,
 				9921CA8625120BA000D49C7F /* SurveyThreeViewController.swift in Sources */,

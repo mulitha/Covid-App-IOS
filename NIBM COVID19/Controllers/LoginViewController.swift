@@ -9,13 +9,14 @@
 import UIKit
 import Firebase
 import MapKit
+import CoreLocation
 
 class LoginViewController: UIViewController {
     
     
+    private let locationManager = CLLocationManager()
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
-    private let locationManager = LocationHandler.shared.locationManager
 
     
     
@@ -34,12 +35,23 @@ class LoginViewController: UIViewController {
         
         guard let email = emailText.text else{return}
         guard let pwd = passwordText.text else{return}
+        
+        if email == ""{
+            self.present(PopupMessages.generateAlert(title: "SignIn", msg: "Email cannot be blank"), animated: false)
+            return
+        }
+        else if pwd == ""{
+            self.present(PopupMessages.generateAlert(title: "SignIn", msg: "Password cannot be blank"), animated: false)
+            return
+        }
 
         Auth.auth().signIn(withEmail: email, password: pwd) { (result, error) in
             if let error = error {
                 print("Faild to register user with error \(error)")
+                self.present(PopupMessages.generateAlert(title: "SignIn", msg: "Please check your email and password"), animated: false)
                 return
             }
+            
             LocationHandler.shared.syncUserLocation()
             self.dismiss(animated: true, completion: nil)
             
@@ -75,22 +87,31 @@ class LoginViewController: UIViewController {
 
 
 
-extension LoginViewController {
+extension LoginViewController : CLLocationManagerDelegate {
+
 
 func enableLocationServices() {
     
+    locationManager.delegate = self
+    
     switch CLLocationManager.authorizationStatus() {
     case .notDetermined:
-        locationManager?.requestWhenInUseAuthorization()
+        locationManager.requestWhenInUseAuthorization()
     case .restricted, .denied:
         break
     case .authorizedWhenInUse:
-        locationManager?.requestAlwaysAuthorization()
+        locationManager.requestAlwaysAuthorization()
     case .authorizedAlways:
-        locationManager?.startUpdatingLocation()
-        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
     default:
         break
     }
 }
+
+
+func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+    self.present(PopupMessages.generateAlert(title: "Location", msg: error.localizedDescription), animated: false)
+}
+
 }

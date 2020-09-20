@@ -19,37 +19,79 @@ class HomeViewController: UIViewController {
     private let locationManager = CLLocationManager()
     @IBOutlet weak var homeMapView: MKMapView!
     @IBOutlet weak var latestNotificationLabel: UILabel!
+    @IBOutlet weak var userImg: UIImageView!
     
     var mLocation : MapMarker!
     var mapLocations : [MapLocations] = []
     var userTemp:Double = 0
     var lati: Double = 0
     var long: Double = 0
-
+    
+    
+    @IBOutlet weak var safePeople: UILabel!
+    @IBOutlet weak var infectedPeople: UILabel!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //Service.shared.signOut()
-
+        enableLocationServices()
         homeMapView.showsUserLocation = true
         homeMapView.userTrackingMode = .follow
-        enableLocationServices()
+        
+        userImg.roundImageView()
+
         getLastNotification()
         syncUserlocation()
         
         mLocation = MapMarker(coordinate: CLLocationCoordinate2D(latitude: lati, longitude: long))
-        getAllTemperatureDetails()
+        pingUserLocations()
+        
     }
+    
+
     
 
     func syncUserlocation(){
         if(Service.shared.getUserUid() != "") {
             DispatchQueue.main.async {
                 LocationHandler.shared.syncUserLocation()
+                self.getUserData()
             }
         }
     }
+    
+    func getUserData() {
+          Service.shared.getUserById { (user) in
+              self.user = user
+          }
+      }
+    
+        private var user: UserModel? {
+            didSet {
+                if let profileImgUrl = user?.imageUrl {
+                    if let url = URL(string:profileImgUrl){
+                        downloadImage(from: url)
+                    }
+                }
+            }
+        }
+    
+    func downloadImage(from url: URL) {
+        getData(from: url) { data, response, error in
+            guard let data = data, error == nil else { return }
+            print(response?.suggestedFilename ?? url.lastPathComponent)
+            print("Download Finished")
+            DispatchQueue.main.async() { [weak self] in
+                self?.userImg.image = UIImage(data: data)
+            }
+        }
+    }
+    
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+           URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+       }
     
     
     
@@ -73,26 +115,15 @@ class HomeViewController: UIViewController {
 
     
       func pingUserLocations(){
+        DispatchQueue.main.async {
             Service.shared.getLocationUpdates{ (mapLocation) in
                 self.mapLocation = mapLocation
             }
         }
+    }
         
         
-        func getAllTemperatureDetails() {
-                Service.shared.getAllTemperatureDetails { (temperature) in
-                    self.userTemperatureDetails = temperature
-                }
-        }
-        
-        
-        private var userTemperatureDetails: [temperatureModal]? {
-            didSet {
-                pingUserLocations()
-            }
-        }
-        
-        
+
         
         
         
@@ -101,30 +132,40 @@ class HomeViewController: UIViewController {
             didSet {
                 if mapLocation!.count > 0{
                     
+                    var safeCount = 0
+                    var infectedCount = 0
+                    
                 for data in mapLocation!{
-                        if data.uid == Service.shared.getUserUid(){
-                            continue
-                        }
-
-                        Service.shared.getSpecificUserTemperatureDetails(data.uid) { (userTemperatureDetails) in
-                            self.userTemp = Double(userTemperatureDetails.temperature)!
-                        }
-                        
+                        if data.uid != Service.shared.getUserUid(){
+                            
                         let coordinate = CLLocationCoordinate2D(latitude: data.lat, longitude: data.log)
                         let pin = MapMarker(coordinate: coordinate)
                         
-                        if self.userTemp < 36 {
+                            if Int(data.temperature) ?? 0 < 38 {
                              pin.title = "SAFE"
+                            safeCount += 1
                          } else {
                              pin.title = "RISK"
+                            infectedCount += 1
                          }
                     
                     self.homeMapView.addAnnotation(pin)
+                            
+                    }
 
                     }
+                    safePeople.text = String(safeCount)
+                    infectedPeople.text = String(infectedCount)
                 }
             }
         }
+    
+
+    
+    
+    
+    
+    
         
 }
 
@@ -155,11 +196,13 @@ extension HomeViewController: CLLocationManagerDelegate {
         }
     }
     
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if status == .authorizedWhenInUse {
-              locationManager.requestAlwaysAuthorization()
-          }
-        
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        self.present(PopupMessages.generateAlert(title: "Location", msg: error.localizedDescription), animated: false)
     }
+    
+    
 }
+
+
 

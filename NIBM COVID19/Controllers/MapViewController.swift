@@ -32,31 +32,19 @@ class MapViewController: UIViewController {
         mapView.userTrackingMode = .follow
         
         mLocation = MapMarker(coordinate: CLLocationCoordinate2D(latitude: lati, longitude: long))
-        getAllTemperatureDetails()
+        pingUserLocations()
+
+    }
+    
+    
         
-    }
-    
-    func pingUserLocations(){
-        Service.shared.getLocationUpdates{ (mapLocation) in
-            self.mapLocation = mapLocation
-        }
-    }
-    
-    
-    func getAllTemperatureDetails() {
-            Service.shared.getAllTemperatureDetails { (temperature) in
-                self.userTemperatureDetails = temperature
+      func pingUserLocations(){
+        DispatchQueue.main.async {
+            Service.shared.getLocationUpdates{ (mapLocation) in
+                self.mapLocation = mapLocation
             }
-    }
-    
-    
-    private var userTemperatureDetails: [temperatureModal]? {
-        didSet {
-            pingUserLocations()
         }
     }
-    
-    
     
     
     
@@ -66,19 +54,12 @@ class MapViewController: UIViewController {
             if mapLocation!.count > 0{
                 
             for data in mapLocation!{
-                    if data.uid == Service.shared.getUserUid(){
-                        self.mapView.addAnnotation(mLocation)
-                        continue
-                    }
-
-                    Service.shared.getSpecificUserTemperatureDetails(data.uid) { (userTemperatureDetails) in
-                        self.userTemp = Double(userTemperatureDetails.temperature)!
-                    }
-                    
+                    if data.uid != Service.shared.getUserUid(){
+                                
                     let coordinate = CLLocationCoordinate2D(latitude: data.lat, longitude: data.log)
                     let pin = MapMarker(coordinate: coordinate)
                     
-                    if self.userTemp < 36 {
+                    if Int(data.temperature) ?? 0 < 38 {
                          pin.title = "SAFE"
                          
                      } else {
@@ -88,11 +69,8 @@ class MapViewController: UIViewController {
                     
                     self.mapView.addAnnotation(pin)
                     
-//                    //zooming
-//                    let cordinate:CLLocationCoordinate2D = CLLocationCoordinate2DMake(data.lat, data.log)
-//                    let span = MKCoordinateSpan(latitudeDelta: 0.1,longitudeDelta: 0.1)
-//                    let region = MKCoordinateRegion(center: cordinate,span: span)
-//                    self.mapView.setRegion(region, animated: true)
+               
+                }
                     
                 }
   

@@ -51,6 +51,7 @@ class SurveyOnesViewController: UIViewController {
     func postData(setSurveyStatus surveyStatus:Int){
       
       let values = [
+        "uid":Service.shared.getUserUid(),
         "surveyOneAnswer":surveyStatus
             ]as [String : Any]
     

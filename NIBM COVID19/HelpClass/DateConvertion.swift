@@ -44,7 +44,7 @@ struct DateConvertion {
         else if minitues > 0{
             return String(minitues)  + " Minutes ago"
         }
-        else {return " Guest now"}
+        else {return " Gust now"}
         
 
     }

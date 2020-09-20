@@ -7,64 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F40A336B-04EA-4595-A844-76A09C9312CB"
+            uuid = "C56E466D-A428-4093-AAE9-8864C3358CB5"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NIBM COVID19/Services/Service.swift"
+            filePath = "NIBM COVID19/Controllers/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "getSpecificUserTemperatureDetails(_:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F40A336B-04EA-4595-A844-76A09C9312CB - 330cf121fa049850"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "NIBM_COVID19.Service.getSpecificUserTemperatureDetails(_: Swift.String, completion: (NIBM_COVID19.temperatureModal) -&gt; ()) -&gt; ()"
-                  moduleName = "NIBM COVID19"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mulitha/Documents/IOS%20CW/NIBM%20COVID19%20Working/NIBM%20COVID19/Services/Service.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "54">
-               </Location>
-               <Location
-                  uuid = "F40A336B-04EA-4595-A844-76A09C9312CB - 1cecfe0de157be85"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in NIBM_COVID19.Service.getSpecificUserTemperatureDetails(_: Swift.String, completion: (NIBM_COVID19.temperatureModal) -&gt; ()) -&gt; ()"
-                  moduleName = "NIBM COVID19"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mulitha/Documents/IOS%20CW/NIBM%20COVID19%20Working/NIBM%20COVID19/Services/Service.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "155">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "439B69F7-1882-4925-B4CC-2DDCDA982754"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NIBM COVID19/Services/Service.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "getSpecificUserTemperatureDetails(_:completion:)"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "downloadImage(from:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

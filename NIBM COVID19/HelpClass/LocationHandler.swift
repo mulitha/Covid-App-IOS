@@ -31,7 +31,6 @@ class LocationHandler: NSObject, CLLocationManagerDelegate {
          
              "lat":location.coordinate.latitude,
              "log":location.coordinate.longitude,
-             "syncDateTime":DateConvertion.shared.stringFromDate(Date()),
              "uid":Service.shared.getUserUid()
              
          ]as [String:Any]

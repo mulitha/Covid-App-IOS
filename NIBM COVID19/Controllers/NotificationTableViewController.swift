@@ -16,16 +16,11 @@ class NotificationTableViewController: UITableViewController {
     var notifications =  [notificationModel]()
 
 
-    let notificationArray = [
-    "uid": Service.shared.getUserUid(),
-    "description":"TEST1",
-    "syncDateTime":DateConvertion.shared.stringFromDate(Date())
-    ]as [String:Any]
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Service.shared.postNotification(notificationArray)
         getAllNotifications()
     }
     

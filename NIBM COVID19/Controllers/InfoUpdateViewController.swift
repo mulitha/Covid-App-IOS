@@ -18,11 +18,14 @@ class InfoUpdateViewController: UIViewController {
     @IBOutlet weak var tempLastUpdateTimeLabel: UILabel!
     @IBOutlet weak var tempSlider: UISlider!
     
-
+    @IBOutlet weak var CreateNotificationView: CardView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         manageVaigationControll(isVisible:false)
         checkIsUserLoginIn()
+        
+    
         
     }
     
@@ -69,9 +72,9 @@ class InfoUpdateViewController: UIViewController {
     
     //MARK: Properties
 
-    private var userTemperatureDetails: temperatureModal? {
+    private var userTemperatureDetails: MapLocations? {
         didSet {
-            let Days = DateConvertion.shared.dateFromString(userTemperatureDetails!.syncDate)
+            let Days = DateConvertion.shared.dateFromString(userTemperatureDetails!.syncDateTime)
 
             tempLabel.text = userTemperatureDetails?.temperature
             tempSlider.value = Float(tempLabel.text ?? "0") ?? 0
@@ -105,9 +108,25 @@ class InfoUpdateViewController: UIViewController {
             
         } else {
             getUserTemperatureDetails()
+            getUserData()
         }
         
     }
+    
+    func getUserData() {
+             Service.shared.getUserById { (user) in
+                 self.user = user
+             }
+         }
+       
+       
+       private var user: UserModel? {
+           didSet {
+            if user?.accountType == 0{
+                CreateNotificationView.isHidden = true
+            }
+           }
+       }
     
     
     
