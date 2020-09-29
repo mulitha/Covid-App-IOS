@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1CE171A69620D980E048554A /* Pods_NIBM_COVID19_NIBM_COVID19UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBAF4060C7453C4FC610867 /* Pods_NIBM_COVID19_NIBM_COVID19UITests.framework */; };
 		52B64601A1E0C4BD09385AC9 /* Pods_NIBM_COVID19Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05923E1A11A7EF6AB15356F9 /* Pods_NIBM_COVID19Tests.framework */; };
+		9902AAC3251FD9F6004D7046 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902AAC2251FD9F5004D7046 /* Util.swift */; };
 		991A2D9C25132ACE00F1B6FE /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A2D9B25132ACE00F1B6FE /* NotificationModel.swift */; };
 		991A2D9F2513310A00F1B6FE /* DateConvertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A2D9E2513310A00F1B6FE /* DateConvertion.swift */; };
 		991A2DA025138CE600F1B6FE /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99218DBB25126A9E00C3ECC9 /* Service.swift */; };
@@ -80,6 +81,7 @@
 		7934E836B30B852072A6BEA8 /* Pods-NIBM COVID19.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM COVID19.debug.xcconfig"; path = "Target Support Files/Pods-NIBM COVID19/Pods-NIBM COVID19.debug.xcconfig"; sourceTree = "<group>"; };
 		7CF3FDD138F0B65F94C285A8 /* Pods-NIBM COVID19-NIBM COVID19UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM COVID19-NIBM COVID19UITests.debug.xcconfig"; path = "Target Support Files/Pods-NIBM COVID19-NIBM COVID19UITests/Pods-NIBM COVID19-NIBM COVID19UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		935D771B2D0F27D7A7DDAC0C /* Pods-NIBM COVID19.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM COVID19.release.xcconfig"; path = "Target Support Files/Pods-NIBM COVID19/Pods-NIBM COVID19.release.xcconfig"; sourceTree = "<group>"; };
+		9902AAC2251FD9F5004D7046 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		991A2D9B25132ACE00F1B6FE /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		991A2D9E2513310A00F1B6FE /* DateConvertion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConvertion.swift; sourceTree = "<group>"; };
 		991F3F0325178D4A006BBF25 /* ViewSurveyDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSurveyDetailsViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				9923B42C251520B6004E98D7 /* LocationHandler.swift */,
 				9923B430251552B2004E98D7 /* MapMarker.swift */,
 				992C5B69251681E5004F731F /* PopupMessage.swift */,
+				9902AAC2251FD9F5004D7046 /* Util.swift */,
 			);
 			path = HelpClass;
 			sourceTree = "<group>";
@@ -592,6 +595,7 @@
 				991F3F0825179B1E006BBF25 /* SurveyTableViewCell.swift in Sources */,
 				99F36DF6250BDA6800875CCC /* AppDelegate.swift in Sources */,
 				9921CA822512060C00D49C7F /* SurveyOnesViewController.swift in Sources */,
+				9902AAC3251FD9F6004D7046 /* Util.swift in Sources */,
 				998A999425108384004168CC /* SignUpViewController.swift in Sources */,
 				9921D37525142300003F4699 /* SettingsTableViewCell.swift in Sources */,
 				99F36DF8250BDA6800875CCC /* SceneDelegate.swift in Sources */,

@@ -98,6 +98,7 @@ class HomeViewController: UIViewController {
     //MARK: Properties
     private var lastNotification : [notificationModel]? {
         didSet {
+            print(lastNotification ?? "")
             if lastNotification?.count ?? 0 > 0{
                 latestNotificationLabel.text = lastNotification?[0].description
             }
@@ -131,6 +132,10 @@ class HomeViewController: UIViewController {
         private var mapLocation : [MapLocations]? {
             didSet {
                 if mapLocation!.count > 0{
+                    
+ 
+                    let annotationsToRemove = homeMapView.annotations.filter { $0 !== homeMapView.userLocation }
+                    homeMapView.removeAnnotations( annotationsToRemove )
                     
                     var safeCount = 0
                     var infectedCount = 0

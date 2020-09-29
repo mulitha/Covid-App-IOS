@@ -43,7 +43,51 @@ struct Service {
     
     func getUserById(completion: @escaping(UserModel) -> Void) {
         
-        REF_USERS.child(getUserUid()).observe(DataEventType.value, with : { (snapshot) in
+        
+        REF_USERS.child(self.getUserUid()).observe(.childChanged , with: {
+            (snapshot) in
+            
+            REF_USERS.child(self.getUserUid()).observeSingleEvent(of: .value, with : { snapshot in
+                let values = snapshot.value as? NSDictionary
+                
+                let firstName = values?["firstName"] as? String ?? ""
+                let lastName = values?["lastName"] as? String ?? ""
+                let email = values?["email"] as? String ?? ""
+                let password = values?["password"] as? String ?? ""
+                let accountType = values?["accountType"] as? Int ?? 0
+                let country = values?["country"] as? String ?? ""
+                let imageUrl = values?["imageUrl"] as? String ?? ""
+                            
+                let user = UserModel(firstName:firstName as String?, lastName:lastName as String?, email:email as String?, password: password as String?, accountType: accountType as Int?, country: country as String?, imageUrl: imageUrl as String?)
+                
+                completion(user)
+            })
+            
+        })
+        
+        REF_USERS.child(self.getUserUid()).observe(.childAdded , with: {
+            (snapshot) in
+            
+            REF_USERS.child(self.getUserUid()).observeSingleEvent(of: .value, with : { snapshot in
+                let values = snapshot.value as? NSDictionary
+                
+                let firstName = values?["firstName"] as? String ?? ""
+                let lastName = values?["lastName"] as? String ?? ""
+                let email = values?["email"] as? String ?? ""
+                let password = values?["password"] as? String ?? ""
+                let accountType = values?["accountType"] as? Int ?? 0
+                let country = values?["country"] as? String ?? ""
+                let imageUrl = values?["imageUrl"] as? String ?? ""
+                            
+                let user = UserModel(firstName:firstName as String?, lastName:lastName as String?, email:email as String?, password: password as String?, accountType: accountType as Int?, country: country as String?, imageUrl: imageUrl as String?)
+                
+                completion(user)
+            })
+            
+        })
+        
+        
+        REF_USERS.child(self.getUserUid()).observeSingleEvent(of: .value, with : { snapshot in
             let values = snapshot.value as? NSDictionary
             
             let firstName = values?["firstName"] as? String ?? ""
@@ -93,50 +137,48 @@ struct Service {
 
     //Get user Temperature details
     func getUserTemperatureDetails(completion: @escaping(MapLocations) -> Void) {
-        REF_USERLOCATIONS.child(getUserUid()).observe(DataEventType.value, with : { (snapshot) in
+        
+        
+        REF_USERLOCATIONS.child(self.getUserUid()).observe(.childChanged , with: {
+            (snapshot) in
 
-            if let directory = snapshot.value as? [String: Any] {
+            REF_USERLOCATIONS.child(self.getUserUid()).observeSingleEvent(of: .value, with : { snapshot in
 
-            for (_, val) in directory{
-                   guard let singleData = val as? [String: Any] else {
-                       continue
-                   }
+                 let singleData = snapshot.value as? [String:Any]
+
+                   let lat = singleData?["lat"]
+                   let log = singleData?["log"]
+                   let uid = singleData?["uid"]
+                   let temperature = singleData?["temperature"] ?? ""
+                   let syncDateTime = singleData?["syncDateTime"] ?? ""
+                    
+                    
+                    completion(MapLocations(lat: lat as! Double, log: log as! Double, uid: uid as! String, syncDateTime: syncDateTime as! String, temperature:temperature as! String))
+                    
+            
+            })
+        })
+        
+        REF_USERLOCATIONS.child(self.getUserUid()).observeSingleEvent(of: .value, with : { snapshot in
+
+
+             let singleData = snapshot.value as? [String:Any]
+
                                  
-               let lat = singleData["lat"]
-               let log = singleData["log"]
-               let uid = singleData["uid"]
-               let temperature = singleData["temperature"] ?? ""
-               let syncDateTime = singleData["syncDateTime"] ?? ""
+               let lat = singleData?["lat"]
+               let log = singleData?["log"]
+               let uid = singleData?["uid"]
+               let temperature = singleData?["temperature"] ?? ""
+               let syncDateTime = singleData?["syncDateTime"] ?? ""
                 
                 
                 completion(MapLocations(lat: lat as! Double, log: log as! Double, uid: uid as! String, syncDateTime: syncDateTime as! String, temperature:temperature as! String))
                 
-            }
-         
-                  
-                
-                                    
-            }
-            
-            
-//                  let singleData = snapshot.value as? [String:AnyObject]
-//
-//                  let lat = singleData?["lat"]
-//                  let log = singleData?["log"]
-//                  let uid = singleData?["uid"]
-//                  let temperature = singleData?["temperature"] ?? ""
-//                  let syncDateTime = singleData?["syncDateTime"] ?? ""
-//
-//                 let  userTemperatureDetails = (MapLocations(lat: lat as! Double, log: log as! Double, uid: uid as! String, syncDateTime: syncDateTime as! String, temperature:temperature as! String))
-//
-//                 completion(userTemperatureDetails)
-//
         
         })
-    }
-    
-    
+        
 
+    }
     
     
     
@@ -234,13 +276,12 @@ struct Service {
 
         var allNotifications = [notificationModel]()
              
-            let recentPostsQuery = (REFF_NOTIFICATION.queryLimited(toLast: 1))
         
         
-             recentPostsQuery.observe(.childChanged , with: {
+             REFF_NOTIFICATION.observe(.childAdded , with: {
                  (snapshot) in
-                 
-                recentPostsQuery.observeSingleEvent(of: .value, with: { snapshot in
+                   
+                (REFF_NOTIFICATION.queryLimited(toLast: 1)).observeSingleEvent(of: .value, with: { snapshot in
                      allNotifications.removeAll()
                      
                      if let directory = snapshot.value as? [String: Any] {
@@ -266,7 +307,7 @@ struct Service {
              })
              
         
-                 recentPostsQuery.observeSingleEvent(of: .value, with: { snapshot in
+                 (REFF_NOTIFICATION.queryLimited(toLast: 1)).observeSingleEvent(of: .value, with: { snapshot in
                      
                      if let directory = snapshot.value as? [String: Any] {
                          for(_, val) in directory{
@@ -326,8 +367,8 @@ struct Service {
                     let lat = singleData["lat"]
                     let log = singleData["log"]
                     let uid = singleData["uid"]
-                    let temperature = singleData["temperature"]
-                    let syncDateTime = singleData["syncDateTime"]
+                    let temperature = singleData["temperature"] ?? "0"
+                    let syncDateTime = singleData["syncDateTime"] ?? ""
                      
                      
                     mapLocation.append(MapLocations(lat: lat as! Double, log: log as! Double, uid: uid as! String, syncDateTime: syncDateTime as! String, temperature:temperature as! String))

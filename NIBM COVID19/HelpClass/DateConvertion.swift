@@ -21,6 +21,9 @@ struct DateConvertion {
     
     
     func dateFromString(_ date: String) -> String{
+        
+        if date == "" {return ""}
+        
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
         let dateFrom =  formatter.date(from: date)!
         let timeIntervalInSeconds = Date().timeIntervalSince(dateFrom)

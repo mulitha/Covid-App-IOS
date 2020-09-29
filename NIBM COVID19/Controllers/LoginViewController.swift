@@ -17,6 +17,11 @@ class LoginViewController: UIViewController {
     private let locationManager = CLLocationManager()
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
+    var callbackClosure: (() -> Void)?
+
+        override func viewWillDisappear(_ animated: Bool) {
+           callbackClosure?()
+            }
 
     
     
@@ -52,8 +57,12 @@ class LoginViewController: UIViewController {
                 return
             }
             
-            LocationHandler.shared.syncUserLocation()
-            self.dismiss(animated: true, completion: nil)
+            DispatchQueue.main.async {
+                LocationHandler.shared.syncUserLocation()
+                self.dismiss(animated: true, completion: nil)
+            }
+            
+
             
         }
     }

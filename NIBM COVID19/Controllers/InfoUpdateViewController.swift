@@ -23,10 +23,12 @@ class InfoUpdateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         manageVaigationControll(isVisible:false)
+            
+
+            
+            
         checkIsUserLoginIn()
-        
-    
-        
+
     }
     
     
@@ -74,12 +76,15 @@ class InfoUpdateViewController: UIViewController {
 
     private var userTemperatureDetails: MapLocations? {
         didSet {
+            
             let Days = DateConvertion.shared.dateFromString(userTemperatureDetails!.syncDateTime)
+            
+            if Days != ""{
+                tempLabel.text = userTemperatureDetails?.temperature
+                tempSlider.value = Float(tempLabel.text ?? "0") ?? 0
+                tempLastUpdateTimeLabel.text = ("Last updated on " + Days )
+            }
 
-            tempLabel.text = userTemperatureDetails?.temperature
-            tempSlider.value = Float(tempLabel.text ?? "0") ?? 0
-            tempLastUpdateTimeLabel.text = ("Last updated on " + Days )
-        
         }
     }
  
@@ -100,6 +105,20 @@ class InfoUpdateViewController: UIViewController {
                         return
                 }
                 
+                signInVC.callbackClosure = { [weak self] in
+                    
+                    DispatchQueue.main.async {
+                        
+                        if Service.shared.getUserUid() != "" {
+                            self!.getUserTemperatureDetails()
+                            self!.getUserData()
+                        }
+                        
+
+                        
+                    }
+                }
+                
                 let navigation = UINavigationController(rootViewController: signInVC)
                 navigation.modalPresentationStyle = .fullScreen
                 self.present(navigation,animated: true,completion: nil)
@@ -107,8 +126,14 @@ class InfoUpdateViewController: UIViewController {
             }
             
         } else {
-            getUserTemperatureDetails()
-            getUserData()
+            
+            DispatchQueue.main.async {
+                
+                self.getUserTemperatureDetails()
+                self.getUserData()
+                
+            }
+
         }
         
     }

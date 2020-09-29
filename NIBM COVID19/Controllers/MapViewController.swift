@@ -53,6 +53,9 @@ class MapViewController: UIViewController {
         didSet {
             if mapLocation!.count > 0{
                 
+                let annotationsToRemove = mapView.annotations.filter { $0 !== mapView.userLocation }
+                mapView.removeAnnotations( annotationsToRemove )
+                
             for data in mapLocation!{
                     if data.uid != Service.shared.getUserUid(){
                                 

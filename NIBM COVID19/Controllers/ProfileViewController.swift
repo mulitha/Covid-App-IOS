@@ -167,6 +167,7 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
             print("Download Finished")
             DispatchQueue.main.async() { [weak self] in
                 self?.image.image = UIImage(data: data)
+                
             }
         }
     }
@@ -179,6 +180,8 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
         
         picker.dismiss(animated: true, completion: nil)
+        self.showSpinner()
+
         
         guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else{
             return
@@ -209,6 +212,8 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
                     UserDefaults.standard.set(urlString, forKey: "url")
                     
                     Service.shared.updateUserProfileImage(urlString)
+                    self.removeSpinner()
+
                 }
             })
         })
